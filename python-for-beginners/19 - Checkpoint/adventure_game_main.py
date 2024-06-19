@@ -1,4 +1,4 @@
-# this file is the main file for the program
+# t
 #-----------------------------------------
 # import the required modules
 import random # import the random module

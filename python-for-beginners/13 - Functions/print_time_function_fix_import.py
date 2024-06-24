@@ -9,10 +9,12 @@ def print_time():
     print()
 
 first_name = 'Susan'
+
 # Call print_time() function to display message and current time
 print_time()
 
 for x in range(0,10):
     print(x)
+    
 # Call print_time() function to display message and current time
 print_time()

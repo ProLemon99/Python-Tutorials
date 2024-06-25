@@ -1,9 +1,12 @@
 # This function will take a name and return the 
 # Create a function to return the first initial of a name
+
 # Parameters:
 #   name: name of person
+
 # Return value
 #   first letter of name passed in
+
 def get_initial(name):
     initial = name[0:1].upper()
     return initial

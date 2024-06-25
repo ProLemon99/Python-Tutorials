@@ -1,7 +1,9 @@
 # Create a function to return the first initial of a name
+
 # Parameters:
 #   name: name of person
 #   force_uppercase: indicates if you always want the initial to be in upppercase: default is True
+
 # Return value
 #   first letter of name passed in
 def get_initial(name, force_uppercase=True):

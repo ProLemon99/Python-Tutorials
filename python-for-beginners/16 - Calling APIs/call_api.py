@@ -5,23 +5,19 @@
 # Use the requests library to simplify making a REST API call from Python 
 import requests
 
-# We will need the json library to read the data passed back 
-# by the web service
+# We will need the json library to read the data passed back  by the web service
 import json
 
-# You need to update the SUBSCRIPTION_KEY to 
-# they key for your Computer Vision Service
+# You need to update the SUBSCRIPTION_KEY to the key for your Computer Vision Service
 SUBSCRIPTION_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-# You need to update the vision_service_address to the address of
-# your Computer Vision Service
+# You need to update the vision_service_address to the address of your Computer Vision Service
 vision_service_address = "https://canadacentral.api.cognitive.microsoft.com/vision/v2.0/"
 
 # Add the name of the function you want to call to the address
 address = vision_service_address + "analyze"
 
-# According to the documentation for the analyze image function 
-# There are three optional parameters: language, details & visualFeatures
+# According to the documentation for the analyze image function, there are three optional parameters: language, details & visual features
 parameters  = {'visualFeatures':'Description,Color',
                'language':'en'}
 
@@ -29,14 +25,12 @@ parameters  = {'visualFeatures':'Description,Color',
 image_path = "./TestImages/PolarBear.jpg"
 image_data = open(image_path, "rb").read()
 
-# According to the documentation for the analyze image function
-# we need to specify the subscription key and the content type
-# in the HTTP header. Content-Type is application/octet-stream when you pass in a image directly
+# According to the documentation for the analyze image function, we need to specify the subscription key and the content type in the HTTP header. 
+# Content-Type is application/octet-stream when you pass in a image directly
 headers    = {'Content-Type': 'application/octet-stream',
               'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY}
 
-# According to the documentation for the analyze image function
-# we use HTTP POST to call this function
+# According to the documentation for the analyze image function we use HTTP POST to call this function
 response = requests.post(address, headers=headers, params=parameters, data=image_data)
 
 # Raise an exception if the call returns an error code

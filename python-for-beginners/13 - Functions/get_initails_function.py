@@ -12,14 +12,17 @@ def get_initial(name):
 
 # This program will ask for someone's name and return the initials
 first_name = input('Enter your first name: ')
+
 # Call get_initial to retrieve initial of name
 first_name_initial = get_initial(first_name)
 
 middle_name = input('Enter your middle name: ')
+
 # Call get_initial to retrieve initial of name
 middle_name_initial = get_initial(middle_name)
 
 last_name = input('Enter your last name: ')
+
 # Call get_initial to retrieve initial of name
 last_name_initial = get_initial(last_name)
 

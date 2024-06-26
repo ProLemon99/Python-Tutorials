@@ -1,7 +1,6 @@
 # Create a function to handle errors that occur during code execution
-# This will display a message to the user adn may log the error for the support team to
-# help with debugging
-# 
+# This will display a message to the user adn may log the error for the support team to help with debugging
+
 # Parameters:
 #   error_code: Unique error code assigned to each type of error: e.g. 45 is datatype conversion error
 #   error_severity: 0 - fatal error should never occur
